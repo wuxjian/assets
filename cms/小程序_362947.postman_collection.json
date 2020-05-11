@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "4701d66c-63cb-4a2b-8f75-baa929d70654",
+		"name": "小程序",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "认证",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "0818lZLo1JnPil0n7sLo10ueMo18lZLI",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/auth",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "注册",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"code\": \"001aYgT52EgGQO0okpU52tEbT52aYgTS\",\n\t\"name\": \"哎呀\",\n\t\"phone\": \"13712345678\",\n\t\"idCard\": \"4224888999991525\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/register",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "绑定",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MjUxNjg2MS02MTg1LTQ5NzQtODhlMC0zYTdjMWE2NDE2YTQiLCJpYXQiOjE1ODgyMzE2MzIsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODg4MzY0MzJ9.oWUQd8AiPbH1i8e09fMkHd1FWDX9hF0QJSMCP8J4HcU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"loginType\": \"3\",\n\t\"uniqueCode\": \"1587716161885\",\n\t\"legalName\": \"卢俊义\",\n\t\"legalIdCode\": \"410568199012123527\",\n\t\"phone\": \"15779636584\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/bind",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"bind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "解绑",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/unbind",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"unbind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取用户信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sign",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/getUserInfo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"getUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "企业主体信息",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/mainInfo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"mainInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "首页两个数量",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/report",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "网站信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/websiteList",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"websiteList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "网站明细",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJiMzk2ZWU1MS03Njc3LTQ0NzItYjdkMC0xNmYwZTIxMTg3MTUiLCJpYXQiOjE1ODg1NTgzMTgsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODkxNjMxMTh9.bKaAxqrqWAkeGXkkkU-kND7dygZSvjlZjHQsmNHWE3E"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3319",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/websiteDetail",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"websiteDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新用户信息",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MjUxNjg2MS02MTg1LTQ5NzQtODhlMC0zYTdjMWE2NDE2YTQiLCJpYXQiOjE1ODgyMzE2MzIsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODg4MzY0MzJ9.oWUQd8AiPbH1i8e09fMkHd1FWDX9hF0QJSMCP8J4HcU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "realName",
+							"value": "微信用户啊",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "13712349876",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "123@qq.com",
+							"type": "text"
+						},
+						{
+							"key": "qq",
+							"value": "987654",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/update",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查找企业",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sign",
+						"type": "text",
+						"value": "jwt_eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0MjUxNjg2MS02MTg1LTQ5NzQtODhlMC0zYTdjMWE2NDE2YTQiLCJpYXQiOjE1ODgyMzE2MzIsInN1YiI6Im93N2ZuNWZZanE2Z1ZoSkZuQ0huMHZiTnJGSWMiLCJleHAiOjE1ODg4MzY0MzJ9.oWUQd8AiPbH1i8e09fMkHd1FWDX9hF0QJSMCP8J4HcU"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "八戒",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:8040/big-data-company/mini/program/search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8040",
+					"path": [
+						"big-data-company",
+						"mini",
+						"program",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
